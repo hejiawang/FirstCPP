@@ -1,11 +1,11 @@
 #include <iostream>
 
 int main(){
-
+	
 	using namespace std;
 
 	cout << "my first C++ project";
-	cout << endl;
+	cout << endl;	//另起一行
 	cout << "hello C++" << endl;
 	int b;
 	cin >> b;
