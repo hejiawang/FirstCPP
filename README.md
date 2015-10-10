@@ -1,0 +1,3 @@
+# FirstCPP
+
+C++ studying
