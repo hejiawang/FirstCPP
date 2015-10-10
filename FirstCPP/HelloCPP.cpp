@@ -5,7 +5,7 @@ int main(){
 	using namespace std;
 
 	cout << "my first C++ project";
-	cout << endl;	//å¦èµ·ä¸€è¡Œ
+	cout << endl;	//ÁíÆðÒ»ÐÐ
 	cout << "hello C++" << endl;
 	int b;
 	cin >> b;
