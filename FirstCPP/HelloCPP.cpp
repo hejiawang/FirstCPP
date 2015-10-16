@@ -10,6 +10,7 @@ void simon(int);
 void stringAndArray();
 void stringType();
 void myInflatable();
+void pointer();
 
 //结构
 struct inflatable{
@@ -30,8 +31,8 @@ int main(){
 	
 	//stringAndArray();
 	//stringType();
-	
-	myInflatable();//结构
+	//myInflatable();//结构
+	pointer();//指针
 
 	cin.get();
 	cin.get();
@@ -85,4 +86,20 @@ void myInflatable(){
 
 	cout << "myInflatable1 name is " << myInflatable1.name << endl;
 	cout << "myInflatable2 volume is " << myInflatable2.volume << endl;
+}
+
+void pointer(){
+
+	int updates = 6;
+	int * p_updates;
+	p_updates = &updates;
+
+	cout << "Values : updates = " << updates;
+	cout << " , *p_updates = " << *p_updates << endl;
+	
+	cout << "Addresses : updates = " << &updates;
+	cout << " , p_updates = " << p_updates << endl;
+
+	*p_updates = *p_updates + 1;
+	cout << "Now updates = " << updates << endl;
 }
