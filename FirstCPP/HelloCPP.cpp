@@ -9,6 +9,14 @@ using namespace std;
 void simon(int);
 void stringAndArray();
 void stringType();
+void myInflatable();
+
+//结构
+struct inflatable{
+	string name;
+	float volume;
+	double price;
+};
 
 int main(){
 	
@@ -21,7 +29,10 @@ int main(){
 	//simon(b);	//自定义函数
 	
 	//stringAndArray();
-	stringType();
+	//stringType();
+	
+	myInflatable();//结构
+
 	cin.get();
 	cin.get();
 	return 0;
@@ -61,4 +72,17 @@ void stringType(){
 	cout << str3 << endl;
 
 	cout << str3.size();
+}
+
+void myInflatable(){
+
+	inflatable myInflatable1 = {
+		"name is haha",
+		0.290,
+		12.45
+	};
+	inflatable myInflatable2 = myInflatable1;
+
+	cout << "myInflatable1 name is " << myInflatable1.name << endl;
+	cout << "myInflatable2 volume is " << myInflatable2.volume << endl;
 }
