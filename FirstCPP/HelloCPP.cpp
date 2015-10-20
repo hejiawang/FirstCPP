@@ -18,6 +18,9 @@ int fill_array(double ar[], int limit);
 void show_array(const double ar[], int n);
 unsigned int c_int_str(const char * str, char ch);
 char * builderStr(char c, int n);
+double betsy(int lns);
+double pam(int lns);
+void estimate(int lines, double(*pf)(int));
 
 //结构
 struct inflatable{
@@ -57,6 +60,14 @@ int main(){
 
 	//char * str = builderStr('a', 5);
 	//cout << str << endl;
+
+	//int code;
+	//cout << " How many lines of code do you nead? " ;
+	//cin >> code;
+	//cout << "Here`s Betsy`s estimate:\n";
+	//estimate(code, betsy);
+	//cout << "Here`s Pam`s estimate:\n";
+	//estimate(code, pam);
 
 	cin.get();
 	cin.get();
@@ -224,7 +235,7 @@ void show_array(const double ar[], int n){ //显示数组内容
 }
 
 unsigned int c_int_str(const char * str, char ch){//比较在指定字符串str中，有几个字符与ch相同
-//unsigned int c_int_str(const char str[], char ch){
+	//unsigned int c_int_str(const char str[], char ch){
 	unsigned int count = 0;
 	while (*str){
 
@@ -237,12 +248,26 @@ unsigned int c_int_str(const char * str, char ch){//比较在指定字符串str�
 	return count;
 }
 
-char * builderStr( char c, int n ){ //返回一个字符串
+char * builderStr(char c, int n){ //返回一个字符串
 
 	char * pStr = new char[n + 1];//*****
-	while ( n-- > 0 ) { //*****
-	
+	while (n-- > 0) { //*****
+
 		pStr[n] = c;
 	}
 	return pStr;
+}
+
+double betsy(int lns){
+	return 0.05*lns;
+}
+
+double pam(int lns){
+	return lns*lns;
+}
+
+void estimate(int lines, double(*pf)(int)){
+
+	cout << lines << " lines will take ";
+	cout << (*pf)(lines) << " hours";
 }
