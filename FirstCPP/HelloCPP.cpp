@@ -16,6 +16,8 @@ void cin1();
 void fileTest();
 int fill_array(double ar[], int limit);
 void show_array(const double ar[], int n);
+unsigned int c_int_str(const char * str, char ch);
+char * builderStr(char c, int n);
 
 //结构
 struct inflatable{
@@ -40,11 +42,21 @@ int main(){
 	//pointer();//指针
 	//cin1();//使用原始的cin进行输入
 	//fileTest();//从控制台输入的信息记录到文件中
-	
-	const int max = 5;
-	double propertise[max];
-	int size = fill_array( propertise, max );
-	show_array(propertise, max);
+
+	//const int max = 5;
+	//double propertise[max];
+	//int size = fill_array(propertise, max);
+	//show_array(propertise, max);
+
+	//char mmm[15] = "minminmin";
+	//unsigned int m = c_int_str(mmm, 'm');
+	//cout << "m : " << m << endl;
+	//char * nnn = "minminminminmin";
+	//unsigned int n = c_int_str(nnn, 'n');
+	//cout << "n : " << n << endl;
+
+	//char * str = builderStr('a', 5);
+	//cout << str << endl;
 
 	cin.get();
 	cin.get();
@@ -174,26 +186,27 @@ void fileTest(){
 	outFile.close();
 }
 
-int fill_array( double ar[], int limit){
+int fill_array(double ar[], int limit){
 
 	//int fill_array( const double ar[], int limit ){//const修饰常亮数据，意味着，不能修改ar
 	double temp;
 	int i;
 	for (i = 0; i < limit; i++) {
-		
-		cout << " Enter value # " << (i+1) << ": ";
+
+		cout << " Enter value # " << (i + 1) << ": ";
 		cin >> temp;
-		if ( !cin ){	//输入的不合法
-			
+		if (!cin){	//输入的不合法
+
 			cin.clear();//清除输入的内容
-			while ( cin.get() != '\n' ){
-				
+			while (cin.get() != '\n'){
+
 				continue;
 			}
 			cout << " Bad input; input process terminated. \n ";
 			break;
-		} else if ( temp < 0 ){
-			
+		}
+		else if (temp < 0){
+
 			break;
 		}
 		ar[i] = temp;
@@ -201,11 +214,35 @@ int fill_array( double ar[], int limit){
 	return i;
 }
 
-void show_array( const double ar[], int n ){ //显示数组内容
-	
+void show_array(const double ar[], int n){ //显示数组内容
+
 	for (int i = 0; i < n; i++){
-		
-		cout << " Property # "<< (i+1) << " :$ ";
-		cout << ar[i] << endl;	
+
+		cout << " Property # " << (i + 1) << " :$ ";
+		cout << ar[i] << endl;
 	}
+}
+
+unsigned int c_int_str(const char * str, char ch){//比较在指定字符串str中，有几个字符与ch相同
+//unsigned int c_int_str(const char str[], char ch){
+	unsigned int count = 0;
+	while (*str){
+
+		if (*str == ch) {
+
+			count++;
+		}
+		str++;
+	}
+	return count;
+}
+
+char * builderStr( char c, int n ){ //返回一个字符串
+
+	char * pStr = new char[n + 1];//*****
+	while ( n-- > 0 ) { //*****
+	
+		pStr[n] = c;
+	}
+	return pStr;
 }
