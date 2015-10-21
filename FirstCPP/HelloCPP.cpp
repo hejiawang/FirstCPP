@@ -253,7 +253,7 @@ char * builderStr(char c, int n){ //返回一个字符串
 	char * pStr = new char[n + 1];//*****
 	while (n-- > 0) { //*****
 
-		pStr[n] = c;
+		pStr[n] = c; 
 	}
 	return pStr;
 }
