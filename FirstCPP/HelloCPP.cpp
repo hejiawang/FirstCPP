@@ -21,6 +21,9 @@ char * builderStr(char c, int n);
 double betsy(int lns);
 double pam(int lns);
 void estimate(int lines, double(*pf)(int));
+void valueTransmit(int value);
+void quoteTransmit(int & value);
+void pointerTransmit(int * value);
 
 //结构
 struct inflatable{
@@ -62,12 +65,19 @@ int main(){
 	//cout << str << endl;
 
 	//int code;
-	//cout << " How many lines of code do you nead? " ;
+	//cout << " How many lines of code do you nead? ";
 	//cin >> code;
 	//cout << "Here`s Betsy`s estimate:\n";
 	//estimate(code, betsy);
 	//cout << "Here`s Pam`s estimate:\n";
 	//estimate(code, pam);
+
+	//int i = 123;
+	//cout << " i is " << i << endl;
+	////valueTransmit(i);
+	////quoteTransmit(i);
+	//pointerTransmit(&i);
+	//cout << " i is " << i << endl;
 
 	cin.get();
 	cin.get();
@@ -253,7 +263,7 @@ char * builderStr(char c, int n){ //返回一个字符串
 	char * pStr = new char[n + 1];//*****
 	while (n-- > 0) { //*****
 
-		pStr[n] = c; 
+		pStr[n] = c;
 	}
 	return pStr;
 }
@@ -270,4 +280,22 @@ void estimate(int lines, double(*pf)(int)){
 
 	cout << lines << " lines will take ";
 	cout << (*pf)(lines) << " hours";
+}
+
+void valueTransmit(int value){ //传递值的普通函数,不能修改原值
+
+	value = 100;
+	cout << "value transmit value is " << value << endl;
+}
+
+void quoteTransmit(int & value){  //传递引用的函数,能修改原值
+
+	value = 100;
+	cout << "quote transmit value is " << value << endl;
+}
+
+void pointerTransmit(int * value){ //传递引用的函数,能修改原值
+
+	*value = 100;
+	cout << "pointer transmit value is " << *value << endl;
 }
