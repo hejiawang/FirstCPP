@@ -24,6 +24,9 @@ void estimate(int lines, double(*pf)(int));
 void valueTransmit(int value);
 void quoteTransmit(int & value);
 void pointerTransmit(int * value);
+void stove(double && i);
+
+extern void printTest();	//声明外部函数
 
 //结构
 struct inflatable{
@@ -32,7 +35,7 @@ struct inflatable{
 	double price;
 };
 
-int main(){
+int mainMAIN(){
 
 	cout << "my first C++ project";
 	cout << endl;	//另起一行
@@ -78,6 +81,8 @@ int main(){
 	////quoteTransmit(i);
 	//pointerTransmit(&i);
 	//cout << " i is " << i << endl;
+	printTest();
+	
 
 	cin.get();
 	cin.get();
