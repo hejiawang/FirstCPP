@@ -27,9 +27,15 @@
     <ClCompile Include="file1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ClassTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="coordin.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassTest.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

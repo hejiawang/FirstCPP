@@ -64,12 +64,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ClassTest.cpp" />
     <ClCompile Include="file1.cpp" />
     <ClCompile Include="file2.cpp" />
     <ClCompile Include="HelloCPP.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClassTest.h" />
     <ClInclude Include="coordin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

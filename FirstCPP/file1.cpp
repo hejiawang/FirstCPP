@@ -2,11 +2,15 @@
 
 #include "coordin.h"
 
-extern polar rect_to_polar(rect xypos);
-extern void show_polar(polar dapos);
-using namespace std;
+namespace file2{
+	extern polar rect_to_polar(rect xypos);
+	extern void show_polar(polar dapos);
+}
 
-int main(){
+using namespace std;
+using namespace file2;
+
+int mainMAIN(){
 	
 	rect rplace;
 	polar pplace;

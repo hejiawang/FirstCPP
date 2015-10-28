@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+
+#include "ClassTest.h"
+
 using namespace std;
 /*
 	函数原型(函数声明),函数原型描述了函数的接口。
@@ -35,7 +38,7 @@ struct inflatable{
 	double price;
 };
 
-int mainMAIN(){
+int main(){
 
 	cout << "my first C++ project";
 	cout << endl;	//另起一行
@@ -81,8 +84,16 @@ int mainMAIN(){
 	////quoteTransmit(i);
 	//pointerTransmit(&i);
 	//cout << " i is " << i << endl;
-	printTest();
-	
+	//printTest();
+	//ClassTest ct("buhao", 37);
+
+	//{//为了能够看到析构函数的输出
+		//ClassTest ct = ClassTest("buhao", 47);
+		//ct.show();
+	//}
+	//ClassTest * ct = new ClassTest("tinghaode", 57);
+	//(*ct).show();
+	//ct->show();
 
 	cin.get();
 	cin.get();
