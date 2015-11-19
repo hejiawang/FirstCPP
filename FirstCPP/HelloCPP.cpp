@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 /*
 	函数原型(函数声明),函数原型描述了函数的接口。
@@ -7,6 +8,7 @@ using namespace std;
 */
 void simon(int);
 void stringAndArray();
+void stringType();
 
 int main(){
 	
@@ -18,8 +20,8 @@ int main(){
 	//cin >> b;	//将控制台输入的值赋给b
 	//simon(b);	//自定义函数
 	
-	stringAndArray();
-	
+	//stringAndArray();
+	stringType();
 	cin.get();
 	cin.get();
 	return 0;
@@ -41,4 +43,22 @@ void stringAndArray(){
 	char name2[Size];
 	cin.getline(name2, Size);
 	cout << name2 << endl;
+}
+
+void stringType(){
+
+	char char1[20];
+	char char2[20] = "nihaoChar";
+
+	string str1;
+	string str2 = "nihaoString";
+
+	//char1 = char2; err..
+	str1 = str2;
+	cout << str1 << endl;
+
+	string str3 = str1 + str2;
+	cout << str3 << endl;
+
+	cout << str3.size();
 }
